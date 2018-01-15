@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.ulpgc.eii.hpds.chd</groupId>
+  <artifactId>practica2Padre</artifactId>
+  <version>1.0</version>
+  <packaging>pom</packaging>
+  <name>practica2Padre</name>
+  <modules>
+    <module>practica2Hijo1</module>
+    <module>practica2Hijo2</module>
+  </modules>
+  <distributionManagement>
+    <repository>
+      <id>company.repository</id>
+      <name>Enterprise Maven Repository</name>
+      <url>file:///C:\Users\Christopher\Desktop\practica2Padre\repositorio"</url>
+    </repository>
+  </distributionManagement>
+</project>

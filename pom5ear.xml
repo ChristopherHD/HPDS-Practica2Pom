@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+   <modelVersion>4.0.0</modelVersion>
+   <groupId>com.javaen</groupId>
+   <artifactId>myEar.ear</artifactId>
+   <packaging>ear</packaging>
+   <version>1.0</version>
+   <name>myWar Maven Webapp</name>
+   <url>http://maven.apache.org</url>
+   <properties>
+      <spring-security.version>3.2.1.RELEASE</spring-security.version>
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <spring.version>4.1.6.RELEASE</spring.version>
+      <jdk.version>1.6</jdk.version>
+      <java-version>1.6</java-version>
+   </properties>
+   <dependencies>
+      <dependency>
+         <groupId>com.javaen</groupId>
+         <artifactId>myApp</artifactId>
+         <version>1.0</version>
+         <type>war</type>
+      </dependency>
+   </dependencies>
+   <build>
+      <finalName>myWar</finalName>
+      <plugins>
+         <!-- Plugin Para armar un ear ... -->
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-ear-plugin</artifactId>
+            <version>2.10</version>
+            <configuration>
+               <modules>
+                  <webModule>
+                     <groupId>com.javaen</groupId>
+                     <artifactId>myApp</artifactId>
+                     <uri>myWar.war</uri>
+                     <bundleFileName>myWar.war</bundleFileName>
+                     <contextRoot>/myWar</contextRoot>
+                     <unpack>false</unpack>
+                  </webModule>
+               </modules>
+            </configuration>
+         </plugin>
+      </plugins>
+   </build>
+</project>
